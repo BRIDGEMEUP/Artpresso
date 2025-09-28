@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artpresso Cafe Webpage </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css"> <!-- fontawesome -->
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --> 
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/tooplate-artpresso-cafe.css">
+<head>
+    <style>
+        /* Logo styling */
+        .tm-logo {
+            max-width: 95px; /* Adjust size of logo */
+            height: 80px; /* Make sure height equals width for a perfect circle */
+            border-radius: 50%; /* Make the image circular */
+            object-fit: cover; /* Ensure the image fits properly within the circle */
+        }
+
+        /* Navigation bar layout */
+        #tm-nav {
+            display: flex;
+            justify-content: space-between; /* Ensure space between logo and menu */
+            align-items: center;
+            width: 100%; /* Ensure full width of the navbar */
+            padding: 10px 20px; /* Add padding on both left and right */
+        }
+
+        /* Logo container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Navigation menu */
+        #tm-nav ul {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end; /* Align menu items to the right */
+        }
+
+        /* Individual menu items */
+        #tm-nav ul li {
+            margin-left: 20px; /* Space between menu items */
+        }
+
+        /* Mobile menu toggle button */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Styling for the main content */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+
+        .content-box {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .bg-black {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .call-to-action {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: gold;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .call-to-action:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="intro" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-01.jpg">
+        <!-- Navigation Bar -->
+        <nav id="tm-nav" class="fixed w-full">
+            <div class="tm-container mx-auto px-2 md:py-6 flex justify-between items-center">
+                <!-- Logo on the left -->
+                <div class="logo-container">
+                    <a href="#intro"><img src="img/logo.png" alt="Artpresso Cafe Logo" class="tm-logo"></a>
+                </div>
+
+                <!-- Navigation Menu on the right -->
+                <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
+                    <li class="inline-block mb-4 mx-4"><a href="#intro" class="tm-text-gold py-1 md:py-3 px-4">Home</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#menu" class="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#about" class="tm-text-gold py-1 md:py-3 px-4">About</a></li>
+<li class="inline-block mb-4 mx-4"><a href="#payment" class="tm-text-gold py-1 md:py-3 px-4">Payment</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#contact" class="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
+ 
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content-box">
+                <h1 style="font-size: 210px; font-family: 'Arial, sans-serif'; margin-bottom: 20px;">Artpresso Cafe</h1>
+                <p style="font-size: 30px; color: gold;">Where Coffee and Creativity Meet</p>
+
+                <!-- Information Box -->
+  <div class="bg-black p-5 mb-5" style="display: flex; justify-content: center; align-items: center; text-align: center; min-height: 200px;">
+    <p class="text-white leading-8 text-sm font-light">
+        Discover a unique blend of artisanal coffee, inspired flavors, and a passion for the arts. At Artpresso, every sip and every bite is crafted to inspire, while our walls showcase local talent and our space invites the community to connect. Step in, savor the moment, and experience where coffee meets creativity. 
+        If you have any question, please <a rel="nofollow" href="https://www.facebook.com/truly.ursbrigitte/" target="_parent">send us a message</a>.
+    </p>
+</div>
+
+
+
+
+<!-- Call to Action -->
+<a href="#menu" class="call-to-action" 
+   onmouseover="applyHoverEffect(this)" 
+   onmouseout="removeHoverEffect(this)">
+    <i class="fas fa-coffee mr-3"></i> Let's explore...
+</a>
+
+<script>
+    function applyHoverEffect(element) {
+        element.style.backgroundColor = "#0056b3"; // Darker background color
+        element.style.color = "#f0f0f0";          // Lighter text color
+        element.style.transform = "scale(1.1)";   // Slight zoom effect
+    }
+
+    function removeHoverEffect(element) {
+        element.style.backgroundColor = "#007bff"; // Original background color
+        element.style.color = "#fff";             // Original text color
+        element.style.transform = "scale(1)";     // Reset zoom effect
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+    <!-- Cafe Menu -->
+    <div id="menu" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-02.jpg">
+        <div class="container mx-auto tm-container py-24 sm:py-48">
+            <div class="text-center mb-16">
+                <h2 class="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">Our Cafe Menu</h2>
+            </div>            
+            <div class="flex flex-col lg:flex-row justify-around items-center">
+                <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
+                    <div class="flex items-start mb-6 tm-menu-item">
+                        <img src="img/menu-item-1.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                           <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Americano</h3>
+<div class="text-white text-md sm:text-lg font-light mb-1">S Php 120.</div>
+<div class="text-white text-md sm:text-lg font-light">L Php 154.</div>
+
+<!-- Quantity Controls -->
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+<script>
+// JavaScript to handle quantity adjustment and cart functionality
+document.addEventListener('DOMContentLoaded', function() {
+    var quantity = document.getElementById('quantity');
+    if (!quantity.innerText) {
+        quantity.innerText = '1'; // Default to 1 if quantity is not set
+    }
+
+    // Increase button functionality
+    document.getElementById('increase-btn').addEventListener('click', function() {
+        var currentQuantity = parseInt(quantity.innerText);
+        if (!isNaN(currentQuantity)) {
+            quantity.innerText = currentQuantity + 1;
+        }
+    });
+
+    // Decrease button functionality
+    document.getElementById('decrease-btn').addEventListener('click', function() {
+        var currentQuantity = parseInt(quantity.innerText);
+        if (currentQuantity > 1) {  // Prevent quantity from going below 1
+            quantity.innerText = currentQuantity - 1;
+        }
+    });
+
+    // Add to Cart button functionality
+    document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+        var currentQuantity = parseInt(quantity.innerText);
+        alert('Added ' + currentQuantity + ' Hot Americano to the cart!');
+    });
+});
+</script>
+
+                        </div>                    
+                    </div>
+                    <div class="flex items-start mb-6 tm-menu-item">
+                        <img src="img/menu-item-2.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Americano</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">S Php 120.</div>
+                            <div class="text-white text-md sm:text-lg font-light">L Php 154.</div>
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+                        </div>                    
+                    </div>
+                    <div class="flex items-start mb-6 tm-menu-item">
+                        <img src="img/menu-item-3.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte </h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">M Php 180.</div>
+                            <div class="text-white text-md sm:text-lg font-light">L Php 225.</div>
+
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+                        </div>                    
+                    </div>
+                    <div class="flex items-start mb-6 tm-menu-item">
+                        <img src="img/menu-item-4.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl tm-text-yellow mb-1">Hot Espresso</h3>
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Chocolate</h3>
+                            <div class="text-white text-md sm:text-lg font-light">M Php 180. </div>
+<div class="text-white text-md sm:text-lg font-light">L Php 225. </div>
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+
+                        </div>                    
+                    </div>
+                </div>
+                <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2">
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Cappuccino</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">Small Php 110.</div>
+                            <div class="text-white text-md sm:text-lg font-light">Large Php 195</div>
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+                        </div>
+                        <img src="img/menu-item-5.jpg" alt="Image" class="rounded-md">                   
+                    </div>
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2">
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Americano</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">Small Php 190</div>
+                            <div class="text-white text-md sm:text-lg font-light">Large Php 225</div>
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+                        </div>
+                        <img src="img/menu-item-6.jpg" alt="Image" class="rounded-md">                    
+                    </div>
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2">
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Milky Latte</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">Small Php 170</div>
+                            <div class="text-white text-md sm:text-lg font-light">Large Php 250</div>
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+                        </div>   
+                        <img src="img/menu-item-7.jpg" alt="Image" class="rounded-md">                 
+                    </div>
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2">                    
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl tm-text-yellow mb-1">Iced Espresso</h3>
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Mocha</h3>
+                            <div class="text-white text-md sm:text-lg font-light">Small Php 165 </div>
+<div class="text-white text-md sm:text-lg font-light">Large Php 265.</div>
+<div class="quantity-controls flex items-center space-x-4 mt-4">
+    <!-- Minus Button -->
+    <button id="decrease-btn" class="quantity-btn bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300">-</button>
+    
+    <!-- Quantity Display -->
+    <span id="quantity" class="text-white text-xl font-semibold">1</span>
+    
+    <!-- Plus Button -->
+    <button id="increase-btn" class="quantity-btn bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">+</button>
+</div>
+
+<!-- Add to Cart Button -->
+<button id="add-to-cart-btn" class="bg-yellow-500 text-white px-6 py-3 mt-4 rounded-full hover:bg-yellow-600 transition duration-300 w-full sm:w-auto">
+    Add to Cart
+</button>
+
+
+                        </div> 
+                        <img src="img/menu-item-8.jpg" alt="Image" class="rounded-md">  
+                 
+                    </div>
+                </div>
+
+            </div>
+
+        </div>    
+     </div>
+<div class="slideshow-container">
+    <!-- Slideshow -->
+   <div id="menu" class="parallax-window" data-parallax="scroll" data-image-src="img/bg.jpg">
+        <div class="container mx-auto tm-container py-24 sm:py-48">
+            <div class="text-center mb-16">
+                <h2 class="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">🌟 Discover Our New 2025 Cafe Menu! 🌟</h2>
+            </div>            
+            <div class="flex flex-col lg:flex-row justify-around items-center">
+                <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
+    <div id="slideshow" class="relative">
+       
+       <div class="mySlides fade">
+            <img src="img/pancake.jpg" class="slide-image" class="slide-image" style="width: 90%;">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/hot choco.jpg" class="slide-image""slide-image" style="width: 90%;">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/2.jpg" class="slide-image"style="width: 90%;">
+        </div>
+
+    </div>
+
+    <!-- Explanations Below Slideshow -->
+   <div id="explanations" class="mt-6 text-center">
+    <div class="caption" style="color: #ffffff;">A stack of fluffy pancakes topped with fresh berries and syrup, beside a hot cup of coffee with steam rising.</div>
+    <div class="caption" style="color: #ffffff;">A close-up of flaky, golden croissants with a light dusting of flour, sitting next to a cup of coffee.</div>
+    <div class="caption" style="color: #ffffff">A tall glass of iced coffee with frothy milk beside a basket of freshly baked bread on a rustic table.</div>
+</div>
+
+</div>
+
+<!-- Slideshow Script -->
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        let captions = document.getElementsByClassName("caption");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            captions[i].style.display = "none"; // Hide caption
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        captions[slideIndex-1].style.display = "block"; // Show caption
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+</script>
+
+<style>
+    .mySlides {display: none; text-align: center;}
+    .fade {
+        animation: fade 2s ease-in-out;
+    }
+    .slide-image {
+        width: 50%; /* Make image 50% of its original size */
+        margin: 0 auto; /* Center the image horizontally */
+        display: block;
+    }
+    .caption {
+        font-size: 18px;
+        color: black;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+   
+</div>
+</div>
+</div>
+    <div id="about" class="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-03.jpg">
+        <div class="container mx-auto tm-container py-24 sm:py-48">
+            <div class="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
+                <div class="bg-white bg-opacity-80 p-12 pb-14 rounded-xl mb-5">
+                    <h2 class="mb-6 tm-text-green text-4xl font-medium">About our cafe</h2>
+                    <p class="mb-6 text-base leading-8">
+                        At Artpresso Café, we blend exceptional coffee with a passion for the arts and a sense of community. Founded with the vision of creating a welcoming space for both coffee lovers and creatives, Artpresso Café is where people come together to enjoy carefully crafted drinks, fresh bites, and local art displays. 
+                  </p>
+                    <p class="text-base leading-8">
+                        Every cup is brewed with care, every dish made with quality ingredients, and every wall showcases talented local artists. Whether you’re here to work, connect, or relax, Artpresso Café offers an inspiring escape where coffee and creativity come to life. </p>
+                </div>
+                <a href="#contact" class="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+                    <i class="far fa-comments mr-4"></i>
+                    Contact
+                </a>
+            </div>           
+        </div>        
+    </div>
+<div id="payment" class="parallax-window relative" data-parallax="scroll" data-image-src="img/last.jpg">
+    <div class="container mx-auto tm-container pt-24 pb-48 sm:py-48">
+        <div class="flex flex-col lg:flex-row justify-around items-center lg:items-stretch">
+            <!-- Payment Form Section -->
+            <div class="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
+                <h2 class="text-3xl mb-6 tm-text-green">Payment Information</h2>
+                <p class="mb-6 text-lg leading-8">
+                    Please enter your payment information below to complete your purchase.
+                </p>
+
+                <!-- Payment Form -->
+                <form action="/submit-payment" method="POST" class="text-lg">
+                    <input type="text" name="name" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Full Name" required="" />
+
+                    <input type="email" name="email" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Email Address" required="" />
+
+                    <input type="text" name="card-number" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Card Number" required="" />
+
+                    <div class="flex justify-between">
+                        <input type="text" name="expiry-date" class="input w-1/2 bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="MM/YY" required="" />
+                        <input type="text" name="cvv" class="input w-1/2 bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="CVV" required="" />
+                    </div>
+
+                    <input type="text" name="billing-address" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Billing Address" required="" />
+
+                    <div class="text-right">
+                        <button type="submit" class="text-black hover:text-yellow-500 transition">Complete Payment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+    <div id="contact" class="parallax-window relative" data-parallax="scroll" data-image-src="img/antique-cafe-bg-04.jpg">
+        <div class="container mx-auto tm-container pt-24 pb-48 sm:py-48">
+            <div class="flex flex-col lg:flex-row justify-around items-center lg:items-stretch">
+                <div class="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
+                    <h2 class="text-3xl mb-6 tm-text-green">Contact Us</h2>
+                    <p class="mb-6 text-lg leading-8">
+                        We’d love to hear from you! Whether you have questions, feedback, or just want to connect, feel free to reach out.    </p>
+
+<p>Opening Hours
+Monday – Sunday: 7:00 am – 09:00 pm
+                    </p>
+
+                    <p class="mb-10 text-lg">
+                        <span class="block mb-2">Tel: <a href="tel:0100200340" class="hover:text-yellow-600 transition">123-456-7891011</a></span>
+                        <span class="block">Email: <a href="mailto:info@company.com" class="hover:text-yellow-600 transition">artpresso@email.com</a></span>                        
+                    </p>
+                    <div class="text-center">
+                        <a href="https://www.google.com/maps" class="inline-block text-white text-2xl pl-10 pr-12 py-6 rounded-lg transition tm-bg-green">
+                            <i class="fas fa-map-marked-alt mr-8"></i>
+                            Open Maps
+                        </a>
+                    </div>                    
+                </div>
+                <div class="flex-1 rounded-xl p-12 pb-14 m-5 bg-black bg-opacity-50 tm-item-container">
+                    <form action="" method="POST" class="text-lg">
+                        <input type="text" name="name" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Name" required="" />
+                        <input type="email" name="email" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Email" required="" />
+                        <textarea rows="6" name="message" class="input w-full bg-black border-b bg-opacity-0 text-white px-0 py-4 mb-4 tm-border-gold" placeholder="Message..." required=""></textarea>
+                        <div class="text-right">
+                            <button type="submit" class="text-white hover:text-yellow-500 transition">Send it</button>
+                        </div>                        
+                      </form>
+                </div>
+            </div>
+            <footer class="absolute bottom-0 left-0 w-full">
+                <div class="text-white container mx-auto tm-container p-8 text-lg flex flex-col md:flex-row justify-between">
+                    <span>Copyright 2024 Artpresso. All rights reserved.</span>
+                                   </div>                
+            </footer>
+        </div>        
+    </div>    
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+
+        function checkAndShowHideMenu() {
+            if(window.innerWidth < 768) {
+                $('#tm-nav ul').addClass('hidden');                
+            } else {
+                $('#tm-nav ul').removeClass('hidden');
+            }
+        }
+
+        $(function(){
+            var tmNav = $('#tm-nav');
+            tmNav.singlePageNav();
+
+            checkAndShowHideMenu();
+            window.addEventListener('resize', checkAndShowHideMenu);
+
+            $('#menu-toggle').click(function(){
+                $('#tm-nav ul').toggleClass('hidden');
+            });
+
+            $('#tm-nav ul li').click(function(){
+                if(window.innerWidth < 768) {
+                    $('#tm-nav ul').addClass('hidden');
+                }                
+            });
+
+            $(document).scroll(function() {
+                var distanceFromTop = $(document).scrollTop();
+
+                if(distanceFromTop > 100) {
+                    tmNav.addClass('scroll');
+                } else {
+                    tmNav.removeClass('scroll');
+                }
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
